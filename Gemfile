@@ -15,6 +15,7 @@ gem 'mailcatcher'
 gem 'ruby'
 gem 'nokogiri'
 gem 'twitter'
+gem "figaro"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
