@@ -1,8 +1,11 @@
-<h2>Tweet!</h2>
-<%= form_for :par_tweet do |f| %>
-  <%= f.text_field :content, placeholder: "Tweet:" %>
-  <%= f.submit value: "Tweet 😎" %>
-  <%= flash[:success] = "Tweet envoyé 👍" %>
+<h1><%=image_tag 'twitter.png' %></h1>
+</br>
+<h2>
+	<%= form_for :par_tweet do |f| %>
+  <%= f.text_field :content, placeholder: "tweet ici:", :class => 'champ' %>
+  <%= f.submit value: "tweet 🐦", :class => 'button' %>
+  
+</h2>
 <% end %>
 
 
