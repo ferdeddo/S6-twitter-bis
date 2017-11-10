@@ -6,11 +6,11 @@ end
 
 def log_in_to_twitter
 	  @client = Twitter::REST::Client.new do |config|
-      config.consumer_key = "tcZV6RLb21LMtA0ZlbO8fFLIi" 
- 	  config.consumer_secret = "eEyaysbiLXQFATbqexsbc7rBBRO6JsnFyvgXclX6NvVNjsbtRD" 
- 	  config.access_token = "918040666659282944-Knu1vLhygUBcxQLau1W6QRhE3mihJpg" 
- 	  config.access_token_secret = "VESIHxYQBjlKwzqJ6LdpMzG6Jwv1Im6QMJXZkOiJP7v5K" 
-  end
+          config.consumer_key        = Figaro.env.pusher_key
+          config.consumer_secret     = Figaro.env.pusher_secret
+          config.access_token        = Figaro.env.stripe_api_key
+          config.access_token_secret = Figaro.env.stripe_publishable_key
+        end
 end
 
 def send_tweet
